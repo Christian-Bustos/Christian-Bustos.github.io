@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <title></title>
+    <style>
+        ::selection {
+        background-color: #1d3557;
+        color: #f7f7f7;
+    }
+        a.github-link {
+            color: #1d3557;
+        }
+
+        a.github-link:hover {
+            color: #1d3557;
+        }
+        
+        a.github-link.active {
+            color: #1d3557;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+			padding-top: 60px;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            font-family: 'Raleway', sans-serif;
+            background-color: #1d3557;
+            color: #303133;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border-bottom: 2px solid #E4E4E4; */
+            font-weight: bold;
+        }
+
+		header.fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        header a {
+            display: inline-block;
+            padding: 5px 10px;
+             border-radius: 5px;
+            background-color: #1d3557;
+            color: #f7f7f7;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        header a.active {
+            background-color: #f7f7f7;
+            color: #1d3557;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 56px;
+            font-weight: normal;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #777777;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            display: none; /* hide projects by default */
+        }
+
+        .project h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #303133; 
+        }
+
+        .project p {
+            margin-bottom: 0;
+        }
+
+        .tags {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tags a {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+            color: #777777;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .tags a.active {
+            background-color: #1d3557;
+            color: #f7f7f7;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="fixed-header">
+        <nav>
+            <a href="#" class="active">Projects</a>
+            <a href="https://Christian-Bustos.github.io/about-me">About me</a>
+            <a href="https://Christian-Bustos.github.io/contacts">Contacts</a>
+        </nav>
+    </header>
+    <main>
+        <div class="tags">
+            <a href="#" class="active" data-tag="all">All</a>
+            <a href="#" data-tag="ML-DL">Machine & Deep Learning</a>
+	    <a href="#" data-tag="sql">SQL</a>
+            <a href="#" data-tag="spark">PySpark</a>
+            <a href="#" data-tag="other">Data Analysis on R</a>
+        </div>
+
+        <div class="project" data-tags="ML-DL">
+            <h3>AdaSVRF & SPIDER-FW for constrained optimization</h3>
+            <p>Frank-Wolfe algorithms occupy a unique position in constrained optimization, as they alleviate both the objective function and the constrained set's computational burdens. In this project, my colleagues and I built from scratch and evaluated two state-of-the-art Frank Wolfe algorithms using a ℓ1-ball constraint.</p>
+            <p><a href="https://github.com/ValerioRocca/Frank-Wolfe" class="github-link">View the project on GitHub</a></p>
+        </div>
+
+        <div class="project" data-tags="spark">
+            <h3>Approximate item frequency for Big Data streams</h3>
+            <p>In a Big Data setting, even simple tasks - such as counting the frequencies of a stream of items - can be unfeasible because of the computational requirements. In this project, I developed a MapReduce implementation of the Count Sketch algorithm for approximating the frequencies of a stream of items using PySpark.</p>
+            <p><a href="https://github.com/ValerioRocca/pyspark-count-sketch" class="github-link">View the project on GitHub</a></p>
+        </div>
+
+        <div class="project" data-tags="sql">
+            <h3>TPC-DS Benchmark using Spark SQL</h3>
+            <p>TPC-DS is the de-facto industry standard benchmark for measuring the performance of decision support solutions. In this project, my colleagues and I implemented the benchmark using Spark SQL, an Apache Spark module for working with structured data.</p>
+            <p><a href="https://github.com/ValerioRocca/TPC-DS-with-SparkSQL" class="github-link">View the project on GitHub</a></p>
+        </div>
+	    
+        <div class="project" data-tags="ML-DL">
+            <h3>Feature selection in psychometric questionnaires</h3>
+            <p>The ratio between the number of participants and the number of questions in psychometric questionnaires can be low. This usually makes data unsuitable for Machine Learning applications. In this notebook, I explore solutions to this problem by studying different feature selection techniques over the PID-5 dataset.</p>
+            <p><a href="https://github.com/ValerioRocca/malingering-detection" class="github-link">View the project on GitHub</a></p>
+        </div>
+        <div class="project" data-tags="ML-DL">
+            <h3>Block Coordinate Schemes for high-dimensional datasets</h3>
+            <p>Famous optimizers such as Adam and RMSProp are not always the best choice to perform Gradient Descent. In this project, me and my colleagues implemented from scratch two Block Coordinate Schemes to solve a high-dimensional semi-supervised learning task. </p>
+            <p><a href="https://github.com/ValerioRocca/block-coordinate-gradient-descent" class="github-link">View the project on GitHub</a></p>
+        </div>
+        <div class="project" data-tags="spark">
+            <h3>Triangle count in a Big Data setting</h3>
+            <p>The project's objective was to estimate the number of triangles in an undirected graph using two PySpark algorithms. The algorithms were then tested on the Orkut dataset using CloudVeneto's cluster.</p>
+            <p><a href="https://github.com/ValerioRocca/spark-triangle-count" class="github-link">View the project on GitHub</a></p>
+        </div>
+        <div class="project" data-tags="other">
+            <h3>Low-carbon electricity generation: a comprehensive analysis</h3>
+            <p>In this project a colleague of mine and I developed a comprehensive analysis of low-carbon electricity generation by exploring the past, the current, and the possible future trends using R.
+            </p>
+            <p><a href="https://github.com/ValerioRocca/low_carbon_electricity_analysis" class="github-link">View the project on GitHub</a></p>
+        </div>
+	<div class="project" data-tags="other">
+            <h3>Animal products: a young-consumers market analysis</h3>
+            <p>BSc thesis in Economics and Statistics. I conducted a market analysis on Italian young people by creating and administering a questionnaire and, subsequently, extracting significant information through R.
+            </p>
+            <p><a href="https://github.com/ValerioRocca/animal-products-market-analysis" class="github-link">View the project on GitHub</a></p>
+        </div>
+    </main>
+
+    <script>
+                const tags = document.querySelectorAll('.tags a');
+
+        tags.forEach(tag => {
+            tag.addEventListener('click', e => {
+                e.preventDefault();
+                const clickedTag = e.target.dataset.tag;
+
+                if (clickedTag === 'all') {
+                    showAllProjects();
+                } else {
+                    filterProjects(clickedTag);
+                }
+
+                tags.forEach(tag => {
+                    tag.classList.remove('active');
+                });
+
+                e.target.classList.add('active');
+            });
+        });
+
+        function showAllProjects() {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                project.style.display = 'block';
+            });
+        }
+
+        function filterProjects(tag) {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                const tags = project.dataset.tags.split(' ');
+                if (tags.includes(tag)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            showAllProjects();
+        });
+    </script>
+</body>
+</html>
